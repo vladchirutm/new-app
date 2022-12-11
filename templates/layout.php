@@ -12,6 +12,8 @@
 <div class="container-fluid">
     <div class="row">
 
+        <input type="button" value="Import Books" onclick="window.location='?action=import'" />
+
         <form method="get" action="">
             <input type="hidden" name="action" value="search" />
             <input type="text" name="param" placeholder="Search for author" value="<?=(!empty($_GET['param'])?$_GET['param']:'')?>" />
@@ -20,10 +22,8 @@
 
         <?php
         if(!empty($searchResults)) {
-            foreach ($searchResults as $record) {
-
-                loadTemplate('bookRow', ['record' => $record]);
-
+            foreach ($searchResults as $i=>$record) {
+                loadTemplate('bookRow', ['record' => $record, 'i' => $i]);
             }
         }
         ?>
