@@ -25,8 +25,8 @@ class ActionClass
 
             foreach ($books->book as $book) {
 
-                $name = (string) $book->author;
-                $title = (string) $book->name;
+                $name = sanitizeItem((string) $book->author, true);
+                $title = sanitizeItem((string) $book->name, true);
 
                 if (!($authorRecord = self::$db->getOne('authors', ['conditions' => ["name = '" . $name . "'"], 'fields' => ['author_id', 'name']]))) {
                     $authorRecord = self::$db->insert('authors', ['name' => $name], 'author_id');
@@ -48,7 +48,7 @@ class ActionClass
     {
         return self::$db->get('authors',
             [
-                'conditions' => ["LOWER(name) like '%" . strtolower($term) . "%'"],
+                'conditions' => ["LOWER(name) like '%" . strtolower(sanitizeItem($term, 'string', true)) . "%'"],
                 'joins' => [
                         [
                         'table' => 'books',

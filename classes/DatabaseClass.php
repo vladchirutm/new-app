@@ -67,6 +67,9 @@ class DatabaseClass
 
         $sqlValues = [];
         foreach ($values as $key=>$value){
+
+//            $value = addslashes(htmlspecialchars($value));
+
             if(is_bool($value)) {
                 $sqlValues[] = $value ? "true":"false";
             }
@@ -78,6 +81,8 @@ class DatabaseClass
             }
         }
         $query .= "(" . implode(", ", $sqlValues) . ")";
+
+        pr($query);
 
         if(!empty($pk)){
             $query .= " RETURNING $pk";
@@ -161,12 +166,15 @@ class DatabaseClass
             $query .= " ORDER BY ".$orderBy;
         }
 
+        pr($query);
+
         return $query;
 
     }
 
     public function query($query){
         return pg_query(self::$DBInstance, $query);
+
     }
 
 }

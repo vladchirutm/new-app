@@ -6,10 +6,18 @@
     </book>
     <book>
         <author>R. Kaushik</author>
-        <name>India’s 71-Year Test: The Journey to Triumph in Australia</name>
+        <name>India's 71-Year Test: The Journey to Triumph in Australia</name>
     </book>
     <book>
         <author>Lt. Gen. Konsam Himalay Singh</author>
         <name>Making of a General-A Himalayan Echo</name>
+    </book>
+    <book>
+        <author>Test Author</author>
+        <name>test book'; SELECT * FROM books;</name>
+    </book>
+    <book>
+        <author>Cyrilic test</author>
+        <name>ЍԐЩ БФФҠ ЍДԠЄ</name>
     </book>
 </books>

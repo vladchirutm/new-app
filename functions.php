@@ -22,3 +22,20 @@ function loadTemplate(string $file, array $parameters = array()): void
     }
     include(APP_PATH . '/templates/' . $file . '.php');
 }
+
+/**
+ * @param string $var
+ * @param bool $addSlashes
+ * @return string
+ */
+function sanitizeItem(string $var, bool $addSlashes = false): string
+{
+    $var = htmlspecialchars($var);
+    if($addSlashes){
+        $var = htmlentities($var, ENT_QUOTES);
+    }
+
+    $var = htmlentities($var);
+
+    return $var;
+}
