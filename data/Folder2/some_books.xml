@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book>
+        <author>Harish Mehta</author>
+        <name>The Maverick Effect</name>
+    </book>
+    <book>
+        <author>Vikas Kumar Jha</author>
+        <name>The Queen of Indian Pop: The Authorised Biography of Usha Uthup</name>
+    </book>
+    <book>
+        <author>Jayanta Ghosal</author>
+        <name>Mamata: Beyond 2021</name>
+    </book>
+</books>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book>
+        <author>Vinit Karnik</author>
+        <name>Business of Sports: The Winning Formula for Success</name>
+    </book>
+    <book>
+        <author>Preeti Shenoy</author>
+        <name>A Place Called Home</name>
+    </book>
+    <book>
+        <author>VP Venkaiah Naidu</author>
+        <name>Modi @20: Dreams Meeting Delivery</name>
+    </book>
+    <book>
+        <author>Author without a book</author>
+        <name></name>
+    </book>
+</books>
